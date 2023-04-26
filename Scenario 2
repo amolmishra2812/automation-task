@@ -1,0 +1,19 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# Create a new instance of the Chrome driver
+driver = webdriver.Chrome()
+
+# Navigate to eBay website
+driver.get("https://www.ebay.com")
+
+# Type the search string in the search bar
+searchBar = driver.find_element_by_name("_nkw")
+searchBar.send_keys("MacBook")
+
+# Change the search category
+searchCategory = driver.find_element_by_id("gh-cat")
+searchCategory.send
